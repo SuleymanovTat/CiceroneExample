@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Upload RC to fabric
           command: ./gradlew crashlyticsUploadDistributionRcRelease
-  master_build:
+  welcome:
     working_directory: ~/code
     docker:
       - image: circleci/android:api-28-alpha
@@ -109,7 +109,7 @@ workflows:
           filters:
             branches:
               only: develop
-      - master_build:
+      - welcome:
           filters:
             branches:
               only: master
