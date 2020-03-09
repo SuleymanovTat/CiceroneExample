@@ -3,28 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     android:orientation="vertical"
-    tools:context=".fragment.MainFragment">
+    tools:context=".fragment.NextFragment">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewFragment2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Fragment 1" />
+        android:text="Fragment 2" />
 
-    <TextView
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="@string/hello_blank_fragment" />
-
-    <TextView
-        android:id="@+id/fragment2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Next fragment2" />
+        android:layout_margin="16dp"
+        android:text="Next 3" />
 
 </LinearLayout>

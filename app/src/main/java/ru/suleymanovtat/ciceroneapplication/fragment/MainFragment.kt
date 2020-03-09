@@ -1,12 +1,16 @@
 package ru.suleymanovtat.ciceroneapplication.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_main.view.*
+import ru.suleymanovtat.ciceroneapplication.App
 import ru.suleymanovtat.ciceroneapplication.R
+import ru.terrakok.cicerone.Navigator
+import ru.terrakok.cicerone.android.support.SupportAppNavigator
+import ru.terrakok.cicerone.commands.Command
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,8 +39,32 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        val view = inflater.inflate(R.layout.fragment_main, container, false)
+        view.fragment2.setOnClickListener {
+
+        }
+        return view
     }
+
+//    private val navigator: Navigator =
+//        object : SupportAppNavigator(this,
+//            R.id.container
+//        ) {
+//            override fun applyCommands(commands: Array<Command>) {
+//                super.applyCommands(commands)
+//                supportFragmentManager.executePendingTransactions()
+//            }
+//        }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        App.INSTANCE?.getNavigatorHolder()?.setNavigator(navigator)
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        App.INSTANCE?.getNavigatorHolder()?.removeNavigator()
+//    }
 
     companion object {
         @JvmStatic
