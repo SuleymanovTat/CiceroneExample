@@ -11,3 +11,12 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+
+general:
+  artifacts:
+    - /Users/dns/Desktop/BUG/CiceroneApplication/app/build/outputs/apk/
+deployment:
+  beta:
+    branch: master
+    commands:
+      - cd scripts && ./build.sh
